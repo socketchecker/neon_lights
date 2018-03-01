@@ -99,7 +99,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/javascripto/basicBot-v2/master/lang/langIndex.json", function (json) {
+        $.get("https://raw.githubusercontent.com/dansinge/neon_lights/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -240,18 +240,18 @@
         status: false,
         name: "basicBot-v2",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/javascripto/basicBot-v2/master/basicBot-test.js",
+        scriptLink: "https://raw.githubusercontent.com/dansinge/neon_lights/master/basicBot-test.js",
         cmdLink: "https://git.io/vofmh",
-        chatLink: "https://rawgit.com/javascripto/basicBot-v2/master/lang/ltu.json",
+        chatLink: "https://raw.githubusercontent.com/dansinge/neon_lights/master/lang/ltu.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot-v2",
+            botName: "Dack_Janiels_v2",
             language: "lithuanian",
-            chatLink: "https://rawgit.com/javascripto/basicBot-v2/master/lang/ltu.json",
-            scriptLink: "https://rawgit.com/javascripto/basicBot-v2/master/basicBot-test.js",
+            chatLink: "https://raw.githubusercontent.com/dansinge/neon_lights/master/lang/ltu.json",
+            scriptLink: "https://raw.githubusercontent.com/dansinge/neon_lights/master/basicBot-test.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 20, // 0-100
@@ -1291,7 +1291,7 @@
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'nachui', 'blet', 'kurva', 'bybys', 'sūka', 'čiulpk bybį', 'nx', 'naxui', 'kurwa'
             ]
         },
         connectAPI: function () {
@@ -2477,7 +2477,7 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://rawgit.com/javascripto/basicBot-v2/master/lang/langIndex.json", function (json) {
+                        $.get("https://raw.githubusercontent.com/dansinge/neon_lights/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
