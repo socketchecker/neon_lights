@@ -99,7 +99,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://raw.githubusercontent.com/dansinge/neon_lights/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/dansinge/neon_lights/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -238,11 +238,11 @@
     var basicBot = {
         version: "0.0.1",
         status: false,
-        name: "basicBot-v2",
+        name: "Dack_Janiels_v2",
         loggedInID: null,
-        scriptLink: "https://raw.githubusercontent.com/dansinge/neon_lights/master/basicBot-test.js",
+        scriptLink: "https://github.com/dansinge/neon_lights/blob/master/basicBot-test.js",
         cmdLink: "https://git.io/vofmh",
-        chatLink: "https://raw.githubusercontent.com/dansinge/neon_lights/master/lang/ltu.json",
+        chatLink: "https://rawgit.com/dansinge/neon_lights/master/lang/ltu.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -250,8 +250,8 @@
         settings: {
             botName: "Dack_Janiels_v2",
             language: "lithuanian",
-            chatLink: "https://raw.githubusercontent.com/dansinge/neon_lights/master/lang/ltu.json",
-            scriptLink: "https://raw.githubusercontent.com/dansinge/neon_lights/master/basicBot-test.js",
+            chatLink: "https://rawgit.com/dansinge/neon_lights/master/lang/ltu.json",
+            scriptLink: "https://github.com/dansinge/neon_lights/blob/master/basicBot-test.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 20, // 0-100
@@ -2477,7 +2477,7 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://raw.githubusercontent.com/dansinge/neon_lights/master/lang/langIndex.json", function (json) {
+                        $.get("https://rawgit.com/dansinge/neon_lights/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
