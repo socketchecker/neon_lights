@@ -99,7 +99,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/javascripto/basicBot-v2/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/dansinge/neon_lights/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -241,7 +241,7 @@
         status: false,
         name: "basicBot v2",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/javascripto/basicBot-v2/master/basicBot.js",
+        scriptLink: "https://github.com/dansinge/neon_lights/blob/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
         chatLink: "https://rawgit.com/javascripto/basicBot-v2/master/lang/en.json",
         chat: null,
@@ -252,7 +252,7 @@
             botName: "basicBot v2",
             language: "english",
             chatLink: "https://rawgit.com/javascripto/basicBot-v2/master/lang/en.json",
-            scriptLink: "https://rawgit.com/javascripto/basicBot-v2/master/basicBot.js",
+            scriptLink: "https://github.com/dansinge/neon_lights/blob/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 200, // 1-200
             startupVolume: 20, // 0-100
@@ -2478,7 +2478,7 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://rawgit.com/javascripto/basicBot-v2/master/lang/langIndex.json", function (json) {
+                        $.get("https://rawgit.com/dansinge/neon_lights/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
